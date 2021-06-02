@@ -10,6 +10,7 @@
     <artifactId>blog_service_subscription</artifactId>
     <name>blog_service_subscription</name>
     <description>blog_service_subscription</description>
+
     <dependencies>
 <!--        hystrix-->
         <dependency>
