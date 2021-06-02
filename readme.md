@@ -14,3 +14,9 @@ Maven工程落地细节复习
 ## blog微服务工程构建
 ### blog模块搭建与工程样图
 ![img]()
+
+SpringBoot读取配置文件顺序：bootstrap.yml>bootstrap.yaml>bootstrap.properties>nacos的配置>application.yml>application.yaml>application.properties
+
+dataId
+${prefix}-${spring.profiles.active}.${file-extension}
+

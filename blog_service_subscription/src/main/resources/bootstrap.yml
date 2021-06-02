@@ -1,0 +1,9 @@
+server:
+  port: 6001
+
+spring:
+  application:
+    name: subscription
+  profiles:
+    active: dev1
+
