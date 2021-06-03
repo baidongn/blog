@@ -10,8 +10,8 @@ spring:
         file-extension: yaml  #指定yaml格式的配置
         group: DEFAULT_GROUP
 ribbon:
-  ReadTimeout:  1000
-  ConnectTimeout: 1000
+  ReadTimeout:  5000
+  ConnectTimeout: 5000
 feign:
   hystrix:
     enabled: true

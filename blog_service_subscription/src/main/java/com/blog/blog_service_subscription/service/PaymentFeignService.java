@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 
 @Component
-@FeignClient(value = "regist",fallback = PaymentFallbackService.class)
+@FeignClient(value = "regist")
 public interface PaymentFeignService {
 
     @GetMapping(value = "/getregist/get/{id}")

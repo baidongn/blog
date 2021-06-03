@@ -24,11 +24,6 @@ public class RegistController {
 
     @GetMapping(value = "/getregist/get/{id}")
     public String getPaymentById(@PathVariable("id") Long id) {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         return "success："+serverPort;
     }
 }
