@@ -1,4 +1,4 @@
-package com.blog.blog_api_commons;
+package com.blog.blogApiCommons;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

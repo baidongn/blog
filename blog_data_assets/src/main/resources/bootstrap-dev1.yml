@@ -1,0 +1,46 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #Nacos服务注册中心地址
+        namespace: dev1
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: dev1
+        file-extension: yml  #指定yaml格式的配置
+        group: DEFAULT_GROUP
+        prefix: regist
+
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719  #默认8719，假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口
+
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 1111111111
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.blog.blogDataAssets.po
+  global-config:
+      id-type: 0
+      db-config:
+        db-type: mysql
+
+# Logger Config
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    com.baomidou.mybatisplus.samples.quickstart: debug
+
+#logging:
+#  level:
+#    root: info
+#    com.star: debug
+#  file: ./log/blog-dev.log
+

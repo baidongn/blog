@@ -1,4 +1,4 @@
-package com.blog.blog_data_assets;
+package com.blog.blogDataAssets;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
