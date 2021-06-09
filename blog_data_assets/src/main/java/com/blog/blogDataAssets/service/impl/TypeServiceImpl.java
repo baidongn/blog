@@ -55,6 +55,6 @@ public class TypeServiceImpl extends ServiceImpl<TypeMapper, Type> implements Ty
 
     @Override
     public void deleteType(Long id) {
-        this.deleteType(id);
+        this.removeById(id);
     }
 }
