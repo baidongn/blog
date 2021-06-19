@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.ZonedDateTime;
+import java.util.Arrays;
 
 //@SpringBootTest
 class BlogGatewayGatewayApplicationTests {
@@ -14,8 +15,12 @@ class BlogGatewayGatewayApplicationTests {
 
     public static void main(String[] args) {
 
-        ZonedDateTime zonedDateTime = ZonedDateTime.now();
-        System.out.println(zonedDateTime);
+        String a = "1,2,3,4,5,6";
+
+        String[] split = a.split(",");
+
+        System.out.println(Arrays.asList(split));
+
     }
 
 }

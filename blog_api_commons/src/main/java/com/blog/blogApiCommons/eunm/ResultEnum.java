@@ -10,7 +10,9 @@ public enum ResultEnum {
 
     ERR_EXCEPTION(999, "异常抛出信息"),
 
-    LOGIN_EXCEPTION(000, "登录失效，请重新登录");
+    LOGIN_EXCEPTION(000, "登录失效，请重新登录"),
+
+    AUTHORIZED_FAIL(401, "鉴权失败");
 
     private final Integer code;
 

@@ -15,4 +15,7 @@ import com.blog.blogDataAssets.po.User;
 public interface UserService extends IService<User> {
     //核对用户名和密码
     User checkUser(String username, String password);
+
+    //通过用户名获取密码
+    User getUserByName(String username);
 }

@@ -23,4 +23,10 @@ public class LoginController {
         return JSONResult.success(user);
     }
 
+    @PostMapping("/getUser")
+    public User getUserByName(@RequestParam String username) {
+        return userService.getUserByName(username);
+
+    }
+
 }

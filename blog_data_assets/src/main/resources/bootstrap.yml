@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: blog
+    name: data_assets
   profiles:
     active: dev1
 
