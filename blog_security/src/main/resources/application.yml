@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: security
+#  mvc:
+#    servlet:
+#      path: /security
 #  profiles:
 #    active: dev1
 
