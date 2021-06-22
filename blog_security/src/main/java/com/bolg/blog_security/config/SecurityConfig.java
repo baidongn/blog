@@ -69,18 +69,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 //角色
 //                .antMatchers("/main1.html").hasAnyRole("abc","qwe") //不需要ROLE_，严格区分大小写
-                .antMatchers("/main1.html").access("hasRole('abc')") //access表达式用法
+//                .antMatchers("/main1.html").access("hasRole('abc')") //access表达式用法
 //                .antMatchers("/main1.html").hasIpAddress("127.0.0.1")
 
                 //所有请求都会被认证，必须登陆之后再访问
                 .anyRequest().authenticated();
+//                .anyRequest().access("@myServiceImpl.hasPermission(request,authentication)");
 
-        //关闭csrf防护
+        //关闭csrf防护(开启的时候，前端应该从 cookie中取出_csrf的token传参进来，服务器端进行验证)
         http.csrf().disable();
 
         //异常处理
         http.exceptionHandling()
                 .accessDeniedHandler(myAccessDeniedHandler);
+
+        http.logout()
+                .logoutUrl("/user/logout")
+                //退出登录跳转界面
+                .logoutSuccessUrl("/login.html");
 
     }
 

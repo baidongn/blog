@@ -1,5 +1,7 @@
 package com.bolg.blog_security.controller;
 
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,8 @@ public class LoginController {
 //        return "redirect:main.html";
 //    }
 
+//    @Secured("ROLE_abc")  //必须要有ROLE_。可以在service和controlelr上使用
+    @PreAuthorize("hasRole('abc')")//这里也可以ROLE_开头
     @RequestMapping("toMain")
     public String toMain() {
         return "redirect:main.html";
